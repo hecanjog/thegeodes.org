@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geodes</title>
+    <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:900" rel="stylesheet" type="text/css" />
+
+    <link href="/css/normalize.css" type="text/css" rel="stylesheet" />
+    <style type="text/less">
+        @main-width: 450px;
+
+        @red: #ff0000;
+        @orange: #ff7f00;
+        @yellow: #ffff00;
+        @green: #00ff00;
+        @blue: #0000ff;
+        @purple: #4b0082;
+        @violet: #8f00ff;
+
+        @main: @red;
+
+
+        * {
+            font-family: "Source Code Pro";
+            font-weight: 900!important;
+        }
+
+        body {
+            background-color: lighten(@blue, 46%);
+            background: #fff;
+        }
+
+        h1 {
+            display: none;
+            text-align: center;
+            font-size: 80px;
+            width: @main-width;
+            margin: 0 auto;
+            text-transform: uppercase;
+            color: #ddd;
+        }
+
+        .rotate(@amount: 90deg) {
+            -webkit-transform: rotate(@amount);
+            -moz-transform: rotate(@amount);
+            -o-transform: rotate(@amount);
+            -ie-transform: rotate(@amount);
+            transform: rotate(@amount);
+        }
+
+        nav {
+            position: relative;
+            text-align: center;
+
+            width: 600px;
+            width: 900px;
+            min-height: 600px;
+            margin: 0 auto;
+            margin-top: 30px;
+
+            a {
+                display: block;
+                float: left;
+                font-size: 20px;
+                text-decoration: none;
+                text-transform: lowercase;
+                //position: absolute;
+                top: 10px;
+                padding: 10px;
+                font-weight: 800;
+                width: 110px;
+
+                span {
+                    transition: all .3s ease-in;
+                    display: block;
+                    opacity: 0.3;
+
+                    b {
+                        transition: all .3s ease-in;
+                    }
+
+                }
+
+                i {
+                    transition: all 2s;
+                    text-transform: uppercase;
+                    text-transform: lowercase;
+                    font-style: normal;
+                    font-size: 100px;
+                }
+
+                @letter-width: 90px;
+                @offset: 30px;
+
+                &.g {
+                    i{ left: 0 + @offset };
+                    color: darken(@main, 10%);
+                    z-index: 5;
+
+                    i {
+                        color: darken(@main, 10%);
+                    }
+                }
+
+                &.e {
+                    color: @orange;
+                    color: darken(@main, 10%);
+                    i {
+                        color: darken(@main, 10%);
+                    }
+                }
+
+                &.o {
+                    color: @yellow;
+                    color: darken(@main, 10%);
+                    i {
+                        color: darken(@main, 10%);
+                    }
+                }
+
+                &.d {
+                    color: @green;
+                    color: darken(@main, 10%);
+                    i {
+                        color: darken(@main, 10%);
+                    }
+                }
+
+                &.ee {
+                    color: @blue;
+                    color: darken(@main, 10%);
+                     i {
+                        color: darken(@main, 10%);
+                    }                   
+                }
+
+                &.s {
+                    color: @purple;
+                    color: darken(@main, 10%);
+                    i {
+                        color: darken(@main, 10%);
+                    }
+                }
+
+
+                &.l i {
+                    color: #ddd;
+                }
+
+
+
+                &:hover {
+                    span {
+                        .rotate();
+                        opacity: 1;
+                        color: darken(@main, 30%);
+                        margin-top: 50px;
+
+                        b {
+                            opacity: 0;
+                        }
+                    }
+
+                    i {
+                        color: @main;
+                    }
+
+
+                }
+
+
+            }
+
+
+        }
+
+        footer {
+            position: fixed;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+
+            font-size: 11px;
+            text-align: center;
+            color: #555;
+
+            a {
+                color: #555;
+                padding: 3px 5px;
+                text-decoration: none;
+
+                &:hover {
+                    color: #000;
+                    text-decoration: underline;
+                }
+            }
+        }
+    </style>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
+</head>
+
+<body>
+    <h1>Geodes</h1>
+
+    <nav>
+        <a class="g" href="/"><i>G</i><span><b>g</b>eodes</span></a>
+        <a class="e" href="mailto:erik@hecanjog.com"><i>E</i><span><b>e</b>mail</span></a>
+        <a class="o" href="javascript:alert('Geodes is Nomad Palace and He Can Jog (Members Cedar AV)');"><i>O</i><span><b>O</b>ther projects</span></a>
+        <a class="d" href="http://www.discogs.com/search/?q=Geodes"><i>D</i><span><b>d</b>iscography</span></a>
+        <a class="ee" href="http://bandsintown.com/Geodes"><i>E</i><span><b>E</b>vents</span></a>
+        <a class="s" href="http://soundcloud.com/geodes"><i>S</i><span><b>s</b>oundcloud</span></a>
+
+        <a class="g l"><i>G</i><span></a>
+        <a class="e l"><i>E</i></a>
+        <a class="o l"><i>O</i></a>
+        <a class="d l"><i>D</i></a>
+        <a class="ee l"><i>E</i></a>
+        <a class="s l"><i>S</i></a>
+    </nav>
+
+    <footer>
+        <a href="/">geodes</a> | 
+        <a href="mailto:erik@hecanjog.com">email</a> | 
+        <a href="javascript:alert('Geodes is Nomad Palace and He Can Jog (Members Cedar AV)');">other projects</a> | 
+        <a href="http://www.discogs.com/search/?q=Geodes">discography</a> | 
+        <a href="http://bandsintown.com/Geodes">events</a> | 
+        <a href="http://soundcloud.com/geodes">soundcloud</a>
+    </footer>
+</body>
+</html>
