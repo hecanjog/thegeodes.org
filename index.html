@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Geodes</title>
-    <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:900" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:200,900" rel="stylesheet" type="text/css" />
 
     <link href="/css/normalize.css" type="text/css" rel="stylesheet" />
     <style type="text/less">
@@ -72,10 +72,13 @@
                 span {
                     transition: all .3s ease-in;
                     display: block;
-                    opacity: 0.3;
+                    opacity: 0;
+                    position: absolute;
+                    font-weight: 200!important;
 
                     b {
                         transition: all .3s ease-in;
+                    font-weight: 200!important;
                     }
 
                 }
@@ -150,6 +153,7 @@
 
                 &:hover {
                     span {
+                        position: static;
                         .rotate();
                         opacity: 1;
                         color: darken(@main, 30%);
