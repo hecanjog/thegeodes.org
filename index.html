@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Geodes</title>
-    <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:200,900" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:900|Volkhov:400,700|Josefin+Slab:300" rel="stylesheet" type="text/css" />
 
     <link href="/css/normalize.css" type="text/css" rel="stylesheet" />
     <style type="text/less">
@@ -12,7 +12,7 @@
         @orange: #ff7f00;
         @yellow: #ffff00;
         @green: #00ff00;
-        @blue: #0000ff;
+        @blue: dodgerblue;
         @purple: #4b0082;
         @violet: #8f00ff;
 
@@ -21,7 +21,6 @@
 
         * {
             font-family: "Source Code Pro";
-            font-weight: 900!important;
         }
 
         body {
@@ -30,177 +29,88 @@
         }
 
         h1 {
-            display: none;
             text-align: center;
-            font-size: 80px;
-            width: @main-width;
+            font-size: 100px;
+            width: 500px;
             margin: 0 auto;
-            text-transform: uppercase;
-            color: #ddd;
+            color: @blue;
+            letter-spacing: 28px;
         }
 
-        .rotate(@amount: 90deg) {
-            -webkit-transform: rotate(@amount);
-            -moz-transform: rotate(@amount);
-            -o-transform: rotate(@amount);
-            -ie-transform: rotate(@amount);
-            transform: rotate(@amount);
-        }
-
-	iframe {
-		margin: 0 auto;
-		margin-top: 50px;
-		padding: 20px;
-	} 
-
-        nav {
-            position: relative;
+        .nav {
             text-align: center;
-
-            width: 600px;
-            width: 900px;
+            width: 500px;
             margin: 0 auto;
-            margin-top: 30px;
+            padding: 0;
+            font-weight: 200;
 
-            a {
-                display: block;
+            list-style-type: none;
+            clear: both;
+
+            li {
+                padding: 2px 2px;
                 float: left;
-                font-size: 20px;
-                text-decoration: none;
-                text-transform: lowercase;
-                //position: absolute;
-                top: 10px;
-                padding: 10px;
-                font-weight: 800;
-                width: 110px;
-
-                span {
-                    transition: all .3s ease-in;
-                    display: block;
-                    opacity: 0;
-                    position: absolute;
-                    font-weight: 200!important;
-
-                    b {
-                        transition: all .3s ease-in;
-                    font-weight: 200!important;
-                    }
-
-                }
-
-                i {
-                    transition: all 2s;
-                    text-transform: uppercase;
-                    text-transform: lowercase;
-                    font-style: normal;
-                    font-size: 100px;
-                }
-
-                @letter-width: 90px;
-                @offset: 30px;
-
-                &.g {
-                    i{ left: 0 + @offset };
-                    color: darken(@main, 10%);
-                    z-index: 5;
-
-                    i {
-                        color: darken(@main, 10%);
-                    }
-                }
-
-                &.e {
-                    color: @orange;
-                    color: darken(@main, 10%);
-                    i {
-                        color: darken(@main, 10%);
-                    }
-                }
-
-                &.o {
-                    color: @yellow;
-                    color: darken(@main, 10%);
-                    i {
-                        color: darken(@main, 10%);
-                    }
-                }
-
-                &.d {
-                    color: @green;
-                    color: darken(@main, 10%);
-                    i {
-                        color: darken(@main, 10%);
-                    }
-                }
-
-                &.ee {
-                    color: @blue;
-                    color: darken(@main, 10%);
-                     i {
-                        color: darken(@main, 10%);
-                    }                   
-                }
-
-                &.s {
-                    color: @purple;
-                    color: darken(@main, 10%);
-                    i {
-                        color: darken(@main, 10%);
-                    }
-                }
-
-
-                &.l i {
-                    color: #ddd;
-                }
-
-
-
-                &:hover {
-                    span {
-                        position: static;
-                        .rotate();
-                        opacity: 1;
-                        color: darken(@main, 30%);
-                        margin-top: 50px;
-
-                        b {
-                            opacity: 0;
-                        }
-                    }
-
-                    i {
-                        color: @main;
-                    }
-
-
-                }
-
-
             }
 
+            a {
+                font-weight: 700;
+                width: 225px;
+
+                display: block;
+                text-decoration: none;
+                background-color: @blue;
+                color: #fff;
+                padding: 10px;
+                font-size: 25px;
+
+                &:hover {
+                    background-color: lighten(@blue, 10%);
+                }
+            }
+        }
+
+        .col-wrapper {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .bandcamp-wrapper {
+            width: 500px;
+            margin: 0 auto;
+            clear: both;
+            margin-top: 20px;
 
         }
 
-        footer {
-            position: fixed;
-            bottom: 10px;
-            left: 0;
-            right: 0;
-
-            font-size: 11px;
+        .about-us {
+            width: 500px;
+            margin: 0 auto;
             text-align: center;
-            color: #555;
+            font-size: 45px;
+            margin-top: 10px;
+            line-height: 1.4;
+
+            color: @blue;
+
+            p, a, span {
+                font-family: 'Volkhov'!important;
+                font-weight: 700;
+            }
+
+            p span {
+                color: lighten(@blue, 20%);
+            }
 
             a {
-                color: #555;
-                padding: 3px 5px;
+                color: darken(@blue, 20%);
                 text-decoration: none;
+                font-size: 26px;
+                line-height: 1.1;
 
                 &:hover {
-                    color: #000;
-                    text-decoration: underline;
+                    color: lighten(@blue, 5%);
                 }
+                    
             }
         }
     </style>
@@ -209,36 +119,30 @@
 </head>
 
 <body>
-    <h1>Geodes</h1>
+    <h1>geodes</h1>
 
-    <nav>
-        <a class="g" href="/"><i>G</i><span><b>g</b>eodes</span></a>
-        <a class="e" href="http://thegeodes.bandcamp.com"><i>E</i><span><b>e</b>p series</span></a>
-        <a class="o" href="javascript:alert('Geodes is Nomad Palace and He Can Jog (Members Cedar AV)');"><i>O</i><span><b>O</b>ther projects</span></a>
-        <a class="d" href="http://www.discogs.com/search/?q=Geodes"><i>D</i><span><b>d</b>iscography</span></a>
-        <a class="ee" href="http://bandsintown.com/Geodes"><i>E</i><span><b>E</b>vents</span></a>
-        <a class="s" href="http://soundcloud.com/geodes"><i>S</i><span><b>s</b>oundcloud</span></a>
-
-        <a class="g l"><i>G</i><span></a>
-        <a class="e l"><i>E</i></a>
-        <a class="o l"><i>O</i></a>
-        <a class="d l"><i>D</i></a>
-        <a class="ee l"><i>E</i></a>
-        <a class="s l"><i>S</i></a>
-
-<iframe style="border: 0; width: 350px; height: 470px;" 
-	src="http://bandcamp.com/EmbeddedPlayer/album=2847393526/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" 
-	seamless><a href="http://thegeodes.bandcamp.com/album/plays-orange-blue">Plays Orange &amp; Blue 
+    <ul class="nav">
+        <li><a href="mailto:erik@hecanjog.com">contact</a></li>
+        <li><a href="http://thegeodes.bandcamp.com">listen</a></li>
+        <li><a href="http://bandsintown.com/Geodes">events</a></li>
+        <li><a href="http://soundcloud.com/geodes">soundcloud</a></li>
+    </ul>
+<div class="bandcamp-wrapper">
+<iframe style="border: 0; width: 500px; height: 620px;" 
+	src="http://bandcamp.com/EmbeddedPlayer/album=3564983980/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" 
+	seamless><a href="http://thegeodes.bandcamp.com/album/drums-with-drones">Drums with Drones 
 	by Geodes</a></iframe>
+    </div>
 
-    </nav>
-    <footer>
-        <a href="/">geodes</a> | 
-        <a href="mailto:erik@hecanjog.com">email</a> | 
-        <a href="javascript:alert('Geodes is Nomad Palace and He Can Jog (Members Cedar AV)');">other projects</a> | 
-        <a href="http://www.discogs.com/search/?q=Geodes">discography</a> | 
-        <a href="http://bandsintown.com/Geodes">events</a> | 
-        <a href="http://soundcloud.com/geodes">soundcloud</a>
-    </footer>
+
+    <div class="about-us">
+    <p>
+            <span>:</span>the geodes<span>:</span><br/>
+            <a href="https://soundcloud.com/be-a-waterwolf">jess lemont</a><br/>
+            <a href="http://hecanjog.com">erik schoster</a><br/>
+            <a href="http://nomadpalace.net">nate zabriskie</a>
+    </p>
+    </div>
+
 </body>
 </html>
