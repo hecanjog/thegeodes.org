@@ -9,27 +9,15 @@
     <style type="text/less">
         @main-width: 450px;
 
-        @red: #ff0000;
-        @orange: #ff7f00;
-        @yellow: #ffff00;
-        @green: #00ff00;
-        @blue: dodgerblue;
-        @blue: #444;
-	@blue: #425F08;
-	@blue: #333;
-	@blue: darken(#8B4513, 10%);
-        @purple: #4b0082;
-        @violet: #8f00ff;
-
-        @main: @red;
-
+	@bg: #fafafa;
+	@fg: darken(#fafafa, 10%);
 
         * {
             font-family: "Source Code Pro";
         }
 
         body {
-            background-color: lighten(@blue, 46%);
+            background-color: lighten(@bg, 46%);
             background: #fff;
         }
 
@@ -38,7 +26,7 @@
             font-size: 100px;
             width: 500px;
             margin: 0 auto;
-            color: @blue;
+            color: @bg;
             letter-spacing: 28px;
         }
 
@@ -63,13 +51,13 @@
 
                 display: block;
                 text-decoration: none;
-                background-color: @blue;
-                color: #fff;
+                background-color: @bg;
+                color: @fg;
                 padding: 10px;
                 font-size: 25px;
 
                 &:hover {
-                    background-color: lighten(@blue, 10%);
+                    background-color: lighten(@bg, 10%);
                 }
             }
         }
@@ -96,7 +84,7 @@
             margin-top: 10px;
             line-height: 1.4;
 
-            color: @blue;
+            color: @bg;
 
             p, a, span {
                 font-family: 'Volkhov'!important;
@@ -104,17 +92,17 @@
             }
 
             p span {
-                color: lighten(@blue, 20%);
+                color: lighten(@bg, 20%);
             }
 
             a {
-                color: darken(@blue, 20%);
+                color: darken(@bg, 20%);
                 text-decoration: none;
                 font-size: 26px;
                 line-height: 1.1;
 
                 &:hover {
-                    color: lighten(@blue, 5%);
+                    color: lighten(@bg, 5%);
                 }
                     
             }
@@ -136,8 +124,8 @@
     </ul>
 <div class="bandcamp-wrapper">
 <iframe style="border: 0; width: 500px; height: 620px;" 
-	src="http://bandcamp.com/EmbeddedPlayer/album=2258475373/size=large/bgcol=ffffff/linkcol=5e0f0d/tracklist=false/transparent=true/" 
-	seamless><a href="http://thegeodes.bandcamp.com/album/rauksvahks">Raukvahkks 
+	src="http://bandcamp.com/EmbeddedPlayer/album=256167732/size=large/bgcol=ffffff/linkcol=e1e1e1/tracklist=false/transparent=true/" 
+	seamless><a href="http://thegeodes.bandcamp.com/album/lecture-series">Lecture Series 
 	by Geodes</a></iframe>
     </div>
 
