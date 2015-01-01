@@ -9,16 +9,16 @@
     <style type="text/less">
         @main-width: 450px;
 
-	@bg: #fafafa;
-	@fg: darken(#fafafa, 10%);
+	@hl: #fafafa;
+	@bg: darken(@hl, 15%);
+	@fg: @bg;
 
         * {
             font-family: "Source Code Pro";
         }
 
         body {
-            background-color: lighten(@bg, 46%);
-            background: #fff;
+            background: @bg;
         }
 
         h1 {
@@ -26,7 +26,7 @@
             font-size: 100px;
             width: 500px;
             margin: 0 auto;
-            color: @bg;
+            color: @hl;
             letter-spacing: 28px;
         }
 
@@ -51,13 +51,13 @@
 
                 display: block;
                 text-decoration: none;
-                background-color: @bg;
+                background-color: @hl;
                 color: @fg;
                 padding: 10px;
                 font-size: 25px;
 
                 &:hover {
-                    background-color: lighten(@bg, 10%);
+                    background-color: lighten(@hl, 10%);
                 }
             }
         }
@@ -84,7 +84,7 @@
             margin-top: 10px;
             line-height: 1.4;
 
-            color: @bg;
+            color: @hl;
 
             p, a, span {
                 font-family: 'Volkhov'!important;
@@ -92,17 +92,17 @@
             }
 
             p span {
-                color: lighten(@bg, 20%);
+                color: lighten(@hl, 20%);
             }
 
             a {
-                color: darken(@bg, 20%);
+                color: darken(@hl, 20%);
                 text-decoration: none;
                 font-size: 26px;
                 line-height: 1.1;
 
                 &:hover {
-                    color: lighten(@bg, 5%);
+                    color: lighten(@hl, 5%);
                 }
                     
             }
