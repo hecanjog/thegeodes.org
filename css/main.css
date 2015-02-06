@@ -25,6 +25,12 @@ h1 {
   padding: 2px 2px;
   float: left;
 }
+.nav li.selected a {
+  background-color: #860f4f;
+}
+.nav li.selected .event-list {
+  display: block;
+}
 .nav a {
   font-weight: 700;
   width: 225px;
@@ -38,6 +44,39 @@ h1 {
 .nav a:hover {
   background-color: #e82c92;
 }
+.nav .events {
+  position: relative;
+}
+.nav .event-list {
+  display: none;
+  position: absolute;
+  top: 69px;
+  left: 10px;
+  width: 480px;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.nav .event-list li {
+  margin: 0;
+  padding: 10px;
+  color: #ffffff;
+  background-color: #9d115d;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.nav .event-list strong {
+  font-size: 16px;
+}
+.nav .event-list p {
+  font-size: 12px;
+  font-weight: normal;
+}
 .col-wrapper {
   width: 500px;
   margin: 0 auto;
@@ -46,7 +85,9 @@ h1 {
   width: 500px;
   margin: 0 auto;
   clear: both;
-  margin-top: 20px;
+  padding-top: 3px;
+  position: relative;
+  left: -1px;
 }
 .about-us {
   display: none;

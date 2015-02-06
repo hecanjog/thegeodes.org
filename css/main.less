@@ -4,99 +4,150 @@
 @bg: #fff;
 @fg: @bg;
 
-    * {
-        font-family: "Source Code Pro";
+* {
+    font-family: "Source Code Pro";
+}
+
+body {
+    background: @bg;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+    width: 500px;
+    margin: 0 auto;
+    color: @hl;
+    letter-spacing: 28px;
+}
+
+.nav {
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    padding: 0;
+    font-weight: 200;
+
+    list-style-type: none;
+    clear: both;
+
+    li {
+        padding: 2px 2px;
+        float: left;
+
+        &.selected {
+            a {
+                background-color: darken(@hl, 15%);
+            }
+
+            .event-list {
+                display: block;
+            }
+        }
     }
 
-    body {
-        background: @bg;
+    a {
+        font-weight: 700;
+        width: 225px;
+
+        display: block;
+        text-decoration: none;
+        background-color: @hl;
+        color: @fg;
+        padding: 10px;
+        font-size: 25px;
+
+        &:hover {
+            background-color: lighten(@hl, 10%);
+        }
+
     }
 
-    h1 {
-        text-align: center;
-        font-size: 100px;
-        width: 500px;
-        margin: 0 auto;
-        color: @hl;
-        letter-spacing: 28px;
+    .events {
+        position: relative;
     }
 
-    .nav {
-        text-align: center;
-        width: 500px;
-        margin: 0 auto;
-        padding: 0;
-        font-weight: 200;
-
+    .event-list {
+        display: none;
+        position: absolute;
+        top: 69px;
+        left: 10px;
+        width: 480px;
         list-style-type: none;
-        clear: both;
+        margin: 0;
+        padding: 10px;
+        text-align: left;
+        background-color: @bg;
+        box-sizing: border-box;
+        z-index: 10;
 
         li {
-            padding: 2px 2px;
-            float: left;
-        }
-
-        a {
-            font-weight: 700;
-            width: 225px;
-
-            display: block;
-            text-decoration: none;
-            background-color: @hl;
-            color: @fg;
+            margin: 0;
             padding: 10px;
-            font-size: 25px;
-
-            &:hover {
-                background-color: lighten(@hl, 10%);
-            }
-        }
-    }
-
-    .col-wrapper {
-        width: 500px;
-        margin: 0 auto;
-    }
-
-    .bandcamp-wrapper {
-        width: 500px;
-        margin: 0 auto;
-        clear: both;
-        margin-top: 20px;
-
-    }
-
-    .about-us {
-    display: none;
-        width: 500px;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 45px;
-        margin-top: 10px;
-        line-height: 1.4;
-
-        color: @hl;
-
-        p, a, span {
-            font-family: 'Volkhov'!important;
-            font-weight: 700;
+            color: @fg;
+            background-color: darken(@hl, 10%);
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
         }
 
-        p span {
-            color: lighten(@hl, 20%);
+        strong {
+            font-size: 16px;
         }
 
-        a {
-            color: darken(@hl, 20%);
-            text-decoration: none;
-            font-size: 26px;
-            line-height: 1.1;
-
-            &:hover {
-                color: lighten(@hl, 5%);
-            }
-                
+        p {
+            font-size: 12px;
+            font-weight: normal;
         }
-
     }
+}
+
+.col-wrapper {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.bandcamp-wrapper {
+    width: 500px;
+    margin: 0 auto;
+    clear: both;
+    padding-top: 3px;
+    position: relative;
+    left: -1px;
+
+}
+
+.about-us {
+display: none;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 10px;
+    line-height: 1.4;
+
+    color: @hl;
+
+    p, a, span {
+        font-family: 'Volkhov'!important;
+        font-weight: 700;
+    }
+
+    p span {
+        color: lighten(@hl, 20%);
+    }
+
+    a {
+        color: darken(@hl, 20%);
+        text-decoration: none;
+        font-size: 26px;
+        line-height: 1.1;
+
+        &:hover {
+            color: lighten(@hl, 5%);
+        }
+            
+    }
+
+}
 
