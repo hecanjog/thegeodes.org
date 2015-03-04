@@ -25,23 +25,25 @@ h1 {
   padding: 2px 2px;
   float: left;
 }
-.nav li.selected a {
+.nav li.selected a[role=nav] {
   background-color: #756974;
 }
 .nav li.selected .event-list {
   display: block;
 }
 .nav a {
+  color: #ffffff;
+}
+.nav a[role=nav] {
   font-weight: 700;
   width: 225px;
   display: block;
   text-decoration: none;
   background-color: #9b909a;
-  color: #ffffff;
   padding: 10px;
   font-size: 25px;
 }
-.nav a:hover {
+.nav a[role=nav]:hover {
   background-color: #b3abb2;
 }
 .nav .events {

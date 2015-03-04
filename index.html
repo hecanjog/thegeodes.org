@@ -14,18 +14,18 @@
     <h1>geodes</h1>
 
     <ul class="nav">
-        <li><a href="mailto:erik@hecanjog.com">contact</a></li>
-        <li><a href="http://thegeodes.bandcamp.com/subscribe">ep series</a></li>
+        <li><a role="nav" href="mailto:erik@hecanjog.com">contact</a></li>
+        <li><a role="nav" href="http://thegeodes.bandcamp.com/subscribe">releases</a></li>
         <li class="events">
-            <a href="http://bandsintown.com/Geodes">events</a>
+            <a role="nav" class="trigger" href="http://bandsintown.com/Geodes">events</a>
             <ul class="event-list">
                 <li>
-                    <strong>March 21st | <a href="http://bremencafe.com/site/calendar/">Bremen Cafe</a> | Milwaukee, WI</strong>
+                    <strong>March 21st | <a target="_blank" href="http://bremencafe.com/site/calendar/">Bremen Cafe</a> | Milwaukee, WI</strong>
                     <p>Featuring Ross Oldenburg. With sets by Holy Sheboygan!, Perennial, and Tonbi Claw</p>
                 </li>
             </ul>
         </li>
-        <li><a href="http://soundcloud.com/geodes">soundcloud</a></li>
+        <li><a role="nav" href="http://soundcloud.com/geodes">soundcloud</a></li>
     </ul>
 <div class="bandcamp-wrapper">
 <iframe style="border: 0; width: 500px; height: 620px;" 
@@ -45,7 +45,7 @@
     </div>
 
     <script>
-        $('.events a').on('click', function(e) {
+        $('.events .trigger').on('click', function(e) {
             e.preventDefault();
             $(this).parent().toggleClass('selected');
         });

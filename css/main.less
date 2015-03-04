@@ -36,7 +36,7 @@ h1 {
         float: left;
 
         &.selected {
-            a {
+            a[role=nav] {
                 background-color: darken(@hl, 15%);
             }
 
@@ -47,13 +47,16 @@ h1 {
     }
 
     a {
+        color: @fg;
+    }
+
+    a[role=nav] {
         font-weight: 700;
         width: 225px;
 
         display: block;
         text-decoration: none;
         background-color: @hl;
-        color: @fg;
         padding: 10px;
         font-size: 25px;
 
