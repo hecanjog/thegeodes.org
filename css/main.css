@@ -9,7 +9,7 @@ h1 {
   font-size: 100px;
   width: 500px;
   margin: 0 auto;
-  color: #827681;
+  color: #685d67;
   letter-spacing: 28px;
 }
 .nav {
@@ -26,7 +26,7 @@ h1 {
   float: left;
 }
 .nav li.selected a[role=nav] {
-  background-color: #5a5159;
+  background-color: #3f393f;
 }
 .nav li.selected .event-list {
   display: block;
@@ -39,12 +39,12 @@ h1 {
   width: 225px;
   display: block;
   text-decoration: none;
-  background-color: #827681;
+  background-color: #685d67;
   padding: 10px;
   font-size: 25px;
 }
 .nav a[role=nav]:hover {
-  background-color: #9b909a;
+  background-color: #827681;
 }
 .nav .events {
   position: relative;
@@ -67,7 +67,7 @@ h1 {
   margin: 0;
   padding: 10px;
   color: #ffffff;
-  background-color: #685d67;
+  background-color: #4d454c;
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -99,7 +99,7 @@ h1 {
   margin-top: 30px;
   margin-bottom: 60px;
   line-height: 1.4;
-  color: #827681;
+  color: #685d67;
 }
 .about-us p,
 .about-us a,
@@ -107,14 +107,14 @@ h1 {
   font-weight: 700;
 }
 .about-us p span {
-  color: #b3abb2;
+  color: #9b909a;
 }
 .about-us a {
-  color: #4d454c;
+  color: #322d32;
   text-decoration: none;
   font-size: 26px;
   line-height: 1.1;
 }
 .about-us a:hover {
-  color: #8f838e;
+  color: #756974;
 }
